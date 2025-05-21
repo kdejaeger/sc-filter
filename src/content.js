@@ -39,6 +39,7 @@ class FilterMenu {
     for (const [i, filter] of filters.entries()) {
       const li = document.createElement("li");
       li.className = "g-tabs-item";
+      li.style.margin = "0";
       const button = document.createElement("a");
       button.className =
         activeFilterIndex === i ? "g-tabs-link active" : "g-tabs-link";
@@ -61,6 +62,7 @@ const FILTERS = [
   new FeedFilter("No reposts", "noReposts"),
   new FeedFilter("Not following", "notFollowing"),
   new FeedFilter("Only singles", "onlySingles"),
+  new FeedFilter("No singles", "noSingles"),
   new FeedFilter("Deep cuts", "deepCuts"),
 ];
 
